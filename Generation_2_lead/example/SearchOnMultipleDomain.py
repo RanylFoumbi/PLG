@@ -22,7 +22,7 @@ class SearchOnMultipleDomain():
             else:
                 #if url is not valid  return empty table
                 DomainEmailAndUrl = {
-                    "Domain": i,
+                    "Domain": domaineName,
                     # set data list content to concern attribut
                     "concern": []
                 }
