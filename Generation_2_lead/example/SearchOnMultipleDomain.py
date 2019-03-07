@@ -7,11 +7,11 @@ class SearchOnMultipleDomain():
 
     def verifyUrlAndSearchEmail(self,domains):
         datasStructured = []
-        for i in domains:
+        for domaineName in domains:
             #if Url respect Url Patern
-            if BingSearch.UrlValidation(BingSearch,i):
+            if BingSearch.UrlValidation(BingSearch,domaineName):
                 #extract good domaine from the enterUrl
-                goodUrl = BingSearch.extractGoodDomain(BingSearch,i)
+                goodUrl = BingSearch.extractGoodDomain(BingSearch,domaineName)
                 #Browse 200 results and return searchUrl and NbrOfLastPage as here we done use last page we put None
                 url = BingSearch.nbrPage(BingSearch,goodUrl,None,200)
                 #url = [listeOfUrl , LastPageNbr] so we need only listeOfUrl it is why we write url[0]
